@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*, *::after, *::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html{
+	box-sizing: border-box;
+}
+
+:root{
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--Very-dark-cyan: hsl(179, 100%, 13%);
+	--Transparent-white: hsla(0, 0%, 100%, 0.75);
+	--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - 0.1px);
+	padding: calc(10vw - 1px) 0;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: calc(90vw - 1px);
+}
+
+.container article{
+	padding: 2rem 2.5rem;
+	color: var(--Very-light-gray);
+}
+
+.container article h1{
+	font-size: 2.5rem;
+	font-family: "Big Shoulders Display";
+	padding: 1rem 0;
+}
+
+.container article p{
+	font-size: 1rem;
+	font-family: "Lexend Deca";
+}
+
+.container article:first-child{
+	background-color: var(--bright-orange);
+	border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.container article:nth-child(2){
+	background-color: var(--dark-cyan);
+}
+
+.container article:nth-child(3){
+	background-color: var(--Very-dark-cyan);
+	border-radius: 0 0 0.625rem 0.625rem;
+}
+
+button{
+	border: none;
+	outline: none;
+	border-radius: 100px;
+	padding: 0.75rem 2rem;
+  background: var(--Very-light-gray);
+	/* color: var(--Transparent-white); */
+	cursor: pointer;
+  font-size: 1rem;
+	margin: 1.75rem 0;
+	font-family: "Lexend Deca";
+}
+
+article:first-child > button{
+	color:var(--bright-orange);
+}
+
+article:nth-child(2) > button{
+	color:var(--dark-cyan);
+}
+
+article:nth-child(3) > button{
+	color:var(--Very-dark-cyan);
+}
+
+article > button:hover{
+	background-color:rgba(0, 0, 0, 0);
+	color: var(--Very-light-gray);
+	cursor: pointer;
+	outline: 2.5px solid var(--Very-light-gray);
+	transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 776px){
+	.container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.container article{
+		max-width: 234px;
+	}
+	.container article:first-child{
+		border-radius: 0.625rem 0 0 0.625rem;
+	}
+	.container article:last-child{
+		border-radius: 0 0.625rem 0.625rem 0;
+	}
+}
+
+
