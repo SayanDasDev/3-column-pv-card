@@ -1,2 +1,2 @@
 # 3-column-pv-card
-Challange from frontendmento.io
+Challange from frontendmentor.io
